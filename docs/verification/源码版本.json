@@ -1,0 +1,387 @@
+{
+  "date": "2026-10-30",
+  "source_matches_validated_build": true,
+  "al_change": "Project Path metadata only; normalized project settings identical",
+  "files": [
+    {
+      "path": "lab_ex4_tf_baseline/src/td_project/al_ip/PLL.ipc",
+      "sha256": "8cb6df3a1bb99cf2f95f9a535d7f33213b837207b36e336848a6ed0db29ab8b5"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/td_project/al_ip/PLL.v",
+      "sha256": "fbbd32d21afd6f155ce15f43495f604d6c07c9ea3143ec8ff1aded99fb7f5a8b"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/td_project/al_ip/PLL.vhd",
+      "sha256": "10cbb29beee90667a5ab77f154ff78d045a549aaf7259c54f82897cc07ac4b3e"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/constraints_source/edid_debug.cwc",
+      "sha256": "aa50faa176776181ad6d98c32a573154d56eb76134d12cfc1a0dafbf666a43fa"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/constraints_source/pin.adc",
+      "sha256": "73748ce2762d537e24bb63677ba40b72c2a5f73da1294254eb676caa7ad4ea86"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/constraints_source/timing.sdc",
+      "sha256": "462568fe0e3ed0ce15248eb468ece0af025d7495c94d5ad516211797930c18e8"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/audio_spectrum_coeffs.v",
+      "sha256": "3192059f8cb664b58df98fcbcb91bdde8c09d46c957c2118a5528a96acc39dff"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/audio_spectrum_goertzel.v",
+      "sha256": "10cec0f32b00d0ac9782496f0fc115c16f41aee2abb0ee533445a250698d6410"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/audio_waveform_capture.v",
+      "sha256": "8f42b6649c465a46f972503fd891b6fc90aac2b17f28b6b62e94c9e14410a7ff"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/av_mode_control.v",
+      "sha256": "150f36a2c05c7c0572c18781ef6de65d3b32c0d3e4a03f1fd815eb50c1042296"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/display_param_commit.v",
+      "sha256": "0e3863bc44a2d4c98808ab0d6586d234c5f05597b8a4898aea2fa53d0fb2fa4c"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/display_param_control.v",
+      "sha256": "2780853f9563b7396ca0b820dafb388339be705d4189cc582d1852f2a53bc949"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/frame_dual_reader.v",
+      "sha256": "af2fa4589bee5b597a4603d8ceb120bb152e59924117bd56d2cdccb833b620f7"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/hdmi_audio_conditioner.v",
+      "sha256": "13231017e4675dcda6e2ea79a9076d9820ae7da4c6561984a64343a6ac815cc5"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/hdmi_line_elastic.v",
+      "sha256": "7ddcb6a11727c4eec7814d58c8bb8d6f311fd2a91224a0c3431e99315f3adb66"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/hdmi_pcm_clock.v",
+      "sha256": "4816d9972f5d3d60c71f540e1a4586e55837b12659cda790ad542983d07eb511"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/hdmi_phy_warpper.v",
+      "sha256": "7665996d6504860ef2554fb8fc70df0746b54dcb2fe078883c2f72c898366ffb"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/hxav_hd_reader.v",
+      "sha256": "19672f6994a0edd506815a7a79e325e5543e6b3d006f701a9e413481fc6070e0"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/hxav_playback.v",
+      "sha256": "2962c9265ab9b91c6bf63ddc78a82a9b33e154bb4cbac0d2a581695a8b1790c0"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/hxav_reader.v",
+      "sha256": "87db9f669ac1f9defd1ba5ec8a629b9fd619634bd4af703cf42bb839ffc76c8d"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/hxav_rle_decoder.v",
+      "sha256": "991687a19b5680c57a54d9d6109b1f4c82d4fada5d6507e577856f75cef2972d"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/image_crossfade_control.v",
+      "sha256": "b204a4d71514c0f34706b7e991e5d4ed6fc3c6114fd28f8305a0d135309b1699"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/image_fade_control.v",
+      "sha256": "da2405643736f2275f9537a0ae50ae4003ab892eb35687ced913d26978660fc3"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/image_resolution_cache.v",
+      "sha256": "0bb210aff74c2a2a2813419df6b4d9571e440d2c2162537e6e39ff070223845f"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/key_remove_shakes.v",
+      "sha256": "fddeb8835bddd9b967de8b2362ba01054d98ca10e29a661fd0df9925375681b5"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/lane_lvds_10_1.v",
+      "sha256": "fd61b139c3803a16d1a3ed33bbd9babd88af4c73702a98b406d7ea6b7771269b"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/lcd_ili9341_panel.v",
+      "sha256": "595f2cf4897d914c5c4b23c08afb8f380764ad1d5b2c1093b798c8b0a5b0ebad"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/osd_display_params.v",
+      "sha256": "27293e60519cb6c5fa6000ee504ec1a1e3e998df1619ef1fd3613dc9fff6ab9f"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/osd_mixed_font.v",
+      "sha256": "2ad4fe44cd8cc4e6ab934312225b79c03c3085f5c9b0c0c7635ccb710cbd2df3"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/osd_pc_time_rx.v",
+      "sha256": "95f0a81b7850a7025648c15fd88f28c4955823ae529f0304ddb06f891418230e"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/osd_static_text_sdram.v",
+      "sha256": "79d5c5569e9c96dd023e596a22352abb0cab7c9e0e5f27fd35366d7d1023c133"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/osd_timekeeper_25m.v",
+      "sha256": "4d4abe563223794d0546985f506e90b770601aeb7d54c3efede4aa1e3f97f2e0"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/startup_pulse.v",
+      "sha256": "9ec05532715e5d3d2b61d252a274a7d045133e7bbba05b074206e9f8f92d697d"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/top_tf_hdmi_audio.v",
+      "sha256": "7709b23b1a0e1889614670d5edae1147958b1a555d8ae572824950b1fa84dbf7"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/touch_lcd_rom.v",
+      "sha256": "132507f390c3d8dabc3236da9b81f9c15dae56ec39165bda426190662a6b6344"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/touch_mode_bridge.v",
+      "sha256": "0eb7cb5619966ecdad175634a4259532e3493896dbe9b2ae4e79553b14307c74"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/touch_panel_control.v",
+      "sha256": "98f186d495441b4ef7e5d7aa3f30ab707a78ef4008fe205a8db9ceae98fd57dc"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/touch_xpt2046.v",
+      "sha256": "a924dc701e50860926111bd757866b59a6361f4d2576e8bfd35d1242881bb627"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/video_audio_waveform.v",
+      "sha256": "7eb3b6ebba195b834c85fd227cff21243c6de03cfeefb92b96b8ae1712bf0c66"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/video_crossfade_rgb.v",
+      "sha256": "bb4ae291cdb0acdac076f6956689ed4cce31ef87fdf6b1444e1d4a65c26185e4"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/video_display_controls.v",
+      "sha256": "ab59485959ec4c22cdad32c2ddac417c78b40be680d4b0939f6853fccdb2e2f1"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/video_fade_rgb.v",
+      "sha256": "07b751554c716c0f022c9b5d18ebb2b1b5e8abb0ddcc3a0160ecc1612a353a6d"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/video_frame_read_bridge.v",
+      "sha256": "ac768e5da86101b3389cfa7931229ef56d9bb8fa3d8b842053143feb11bfdb9f"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/video_image_transition.v",
+      "sha256": "16c5542fac957a36f9ef3ccff95da681632111a3fff0e6fcdab7bc8e738d1f62"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/video_osd_coord_640x480.v",
+      "sha256": "d995e66832605e3a29c782f93c595fce303d0d1184c2dacd67eaa03057aede27"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/video_picture_adjust.v",
+      "sha256": "44abd4551e49ea8a6f2f27942f42338a766e45007183ebb8f1ee0800140d718a"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/video_rgb_to_axis_640x480.v",
+      "sha256": "bd7c6765fcf873dffef3209ec7b9428126e57e05eae9da543c5b9d291809409a"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/video_source_test.v",
+      "sha256": "7ba887711a7d0dd20bff3abe0e31394bcb66c05d307f2da9b749ba32394c6462"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/ip_source/pll.ipc",
+      "sha256": "5d632bad332785258c35ca41ce2b4a2a550e6bfd75be0b63a3f72403ca2ce11e"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/ip_source/pll.v",
+      "sha256": "94dd0d7cfdea026002a3b35178519e6ea0b7a38f1d97d22cbc3ce993d66be27e"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/ip_source/pll.vhd",
+      "sha256": "f60087ac2344c324e65381c009969a19040d231e643a95f62f78e9596d4d2bbe"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/hdmi1.4b_transmitter_core/hdmi_1_4b_transmitter_core_wrapper.enc.v",
+      "sha256": "25a28679c51d779a1c811772cf83e3092a3106b25e2e21f1560ba624ebd72bd0"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/include/global_def.v",
+      "sha256": "fd8971569748736d8bffeefdd16f1b28fcd3e57c2ffd449673896fc5b8032cf6"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/include/sdr_as_ram.enc.v",
+      "sha256": "ebecfaf30303a1353ac3bd48d5785836b9622e480ebd6a95bc4a663e43688936"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/include/sdr_init_ref.enc.v",
+      "sha256": "52efb8ed26be68750148fa4c43f4522759f1ab6a0c223050e0af1757853a74d5"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/include/sdr_wrrd.enc.v",
+      "sha256": "8ad6e44a16e5c1ad895a9461ed2a20b0449920f5139e3a0d091a2dcae400c1aa"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/afifo_16_256.tcl",
+      "sha256": "d997836e5bfe6f32f21853efc2ac8ea31d6efa58f018429f9f03a6be6d438b0f"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/afifo_16_256.v",
+      "sha256": "d55dc7061f59766a252ce2b2051d1eb240625bd0d79910951631f5cc3619074d"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/afifo_16_256.vhd",
+      "sha256": "c0f5cec614260600097dbf3eaaeecabce6957a321355375237173ffeac695971"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/afifo_16_256_sim.v",
+      "sha256": "2cfcf9d4cc2a1715b5146b0e0b5939e30f2a8933938351fedabe13acb5fca17f"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/afifo_16_32_256.ipc",
+      "sha256": "9df57c0b914f2f6222f88e356528947224fddb866be2468f1391c26d4e60d371"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/afifo_16_32_256.tcl",
+      "sha256": "1cb3d282feb1db8578787d83a2e8afc32e40ae5de1efbf663c108ba8fce27110"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/afifo_16_32_256.v",
+      "sha256": "5384b6ae7df9c6f7b5ff254f225cdb4f10ab3d6356251b505ed33d7c426d90a3"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/afifo_32_16_256.ipc",
+      "sha256": "a74955dc68a02bbfb36780127008c4737ec80e0888a4648e98e6eac9f5d2c349"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/afifo_32_16_256.tcl",
+      "sha256": "9c4ba11424afa290f0e7533d8f61b2cf23611241bb03ac3de3d58bbcc918a1db"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/afifo_32_16_256.v",
+      "sha256": "bd889ced60f9071eae4b9e352228a207c8bf70c815e2d3dc7950bbc00dcf5c1d"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/sdram.ipc",
+      "sha256": "c3092876d4a66739dfc52cbda4fe84eab75099218f65db7e7d922c41dee1c201"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/sdram.v",
+      "sha256": "65e5774a597f30c18a9cb3989c08e7fd724397c8d9fdc9edbac87f4243aa6f40"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/sdram.vhd",
+      "sha256": "7250c8e3eebd4a32e531bb4c3596293fbd503a87f3fe20e89409dc5fea6215f0"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/sys_pll.ipc",
+      "sha256": "5199d4459b3437892ed6be21a62f7528d3ce534bd9b1001a84e42074122266fe"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/sys_pll.v",
+      "sha256": "a3ef27fc36639c4a7aa468ecdf820fbcfea829472339f16a8ec279b32da73a7e"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/sys_pll.vhd",
+      "sha256": "019ef5f6c340d00d954c629f206aa13dc85be859b7fb897b9fa4cdcaee8d0e25"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/video_pll.ipc",
+      "sha256": "b717f646067025a69b4021ed85adeeb6531fad881bce5a49fcb2171ccf401076"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/video_pll.v",
+      "sha256": "fb658442a666353578314c49438070fd452271682ae747bc8dc8f4bfeeca8bf9"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/IP/video_pll.vhd",
+      "sha256": "123b8ca74e35cfc9156193a6c094997aa2490888da9385c0eb606ed50c5ad4f6"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/ax_debounce.v",
+      "sha256": "5449b3e57986d97e8ee67f2d00370302e9908e36aa7096197f6d583186581aaa"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/bmp_read.v",
+      "sha256": "c00852dcf39da58c20ab6ff156dc117409b99c8d03eb5c77e94757135bdc3f01"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/bmp_row_diagnostic.v",
+      "sha256": "6a0e7f57158ed0b7e9472d187d3304455067ecd247489c54f7b0b23290dab768"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/bmp_row_reader.v",
+      "sha256": "46ff20d01f8834e4178e305277577bbb2cd4e9571af0ed03536d35b84d1a22ee"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/bmp_scaled_read.v",
+      "sha256": "669d41ea67372b5e367981e01e33373cd255d396c6f0628896a624bf7ba93ce3"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/color_bar.v",
+      "sha256": "afe1f56714ec58d2477ba1717e5a36c5a0da5fe5c07d70d11aa5ace710c4b152"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/frame_fifo_read.v",
+      "sha256": "57cb4b69a2ad28e80e7f7344de1669d3fa186a8edff23165bea7ea3ac0f92553"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/frame_fifo_write.v",
+      "sha256": "6c0732cf82f13acde0f50120ae9171098151efc11086fd0d48430621d4abaa87"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/frame_read_write.v",
+      "sha256": "c10b0c2573ff99f9109ad258a875819a93daf114fe130f49d3e74631b8f4493e"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/sdram.v",
+      "sha256": "237e08f330ca0e06adc491c5b895c85130e64adfff56fd796169a3d6c111f68e"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/sd_card_bmp.v",
+      "sha256": "8c99c2e96dabeb966d099bd190e851db8461d09c20d4771cf822d06ce2217f8f"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/sd_card_cmd.v",
+      "sha256": "a1a50502afd4e8b238b0627cd5f204c04738e761d49ab48f33da35e22ba4a5fa"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/sd_card_sec_read_write.v",
+      "sha256": "56e42b78f5c09c55b7f2ae4798d8fb5476fb1393fd4822fab181d0f7174325c7"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/sd_card_top.v",
+      "sha256": "d5031b5b809a8df0a2c8cca194a511c5f74236e810cbe5e8436359f9e5f26a39"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/seg_decoder.v",
+      "sha256": "62a2664be7db6d0dace31fc97a8faef0c43f44b639b1d5a6a2c49773812a3b5e"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/seg_scan.v",
+      "sha256": "c61d6b6808e06dd0edc6db2d8f214426a1fb96d546556ecd1f74ea9ca6889f52"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/spi_master.v",
+      "sha256": "37f7a21144fa5cca3cc5c3b5f68a5ad40b3108336b600e45a1367734ac61403c"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/video_define.v",
+      "sha256": "77748966850a8f5af0d77f2cdb08006088ba5e1a31b98391fba6cc61c5247da2"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/video_delay.v",
+      "sha256": "711554c6615cdec86e105fb78f6d4b0a4ee0987420bb5d7e6fe45f9027ed3d8f"
+    },
+    {
+      "path": "lab_ex4_tf_baseline/src/user_source/hdl_source/SD/video_timing_data.v",
+      "sha256": "c6ed5c6bd96c2d3b295fb33781a88a01c49b3e141388a10b72a217d3a02c3c61"
+    }
+  ]
+}

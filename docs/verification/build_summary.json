@@ -1,0 +1,48 @@
+{
+  "before": {
+    "ordinary_warnings": 67,
+    "critical_warnings": 4,
+    "errors": 0,
+    "codes": {
+      "HDL-7225:CRITICAL-WARNING": 1,
+      "HDL-5373:WARNING": 1,
+      "HDL-5007:WARNING": 16,
+      "HDL-5317:WARNING": 3,
+      "HDL-5314:WARNING": 1,
+      "HDL-5001:WARNING": 2,
+      "SYN-5013:WARNING": 3,
+      "SYN-5025:WARNING": 3,
+      "USR-6001:WARNING": 12,
+      "SYN-5011:WARNING": 14,
+      "SYN-6577:WARNING": 1,
+      "SYN-6562:WARNING": 10,
+      "PHY-7002:CRITICAL-WARNING": 2,
+      "PHY-5079:CRITICAL-WARNING": 1,
+      "PHY-5089:WARNING": 1
+    }
+  },
+  "after": {
+    "ordinary_warnings": 31,
+    "critical_warnings": 3,
+    "errors": 0,
+    "codes": {
+      "HDL-5007:WARNING": 6,
+      "HDL-5317:WARNING": 3,
+      "HDL-5001:WARNING": 2,
+      "SYN-5013:WARNING": 2,
+      "SYN-5025:WARNING": 3,
+      "SYN-5011:WARNING": 14,
+      "PHY-7002:CRITICAL-WARNING": 3,
+      "PHY-5089:WARNING": 1
+    }
+  },
+  "files": {
+    "lab_ex4_tf_baseline\\src\\user_source\\hdl_source\\top_tf_hdmi_audio.v": "7709b23b1a0e1889614670d5edae1147958b1a555d8ae572824950b1fa84dbf7",
+    "lab_ex4_tf_baseline\\src\\user_source\\hdl_source\\SD\\sdram.v": "237e08f330ca0e06adc491c5b895c85130e64adfff56fd796169a3d6c111f68e",
+    "lab_ex4_tf_baseline\\src\\user_source\\hdl_source\\ip\\afifo_16_32_256.tcl": "1cb3d282feb1db8578787d83a2e8afc32e40ae5de1efbf663c108ba8fce27110",
+    "lab_ex4_tf_baseline\\src\\user_source\\hdl_source\\ip\\afifo_32_16_256.tcl": "9c4ba11424afa290f0e7533d8f61b2cf23611241bb03ac3de3d58bbcc918a1db",
+    "lab_ex4_tf_baseline\\src\\td_project\\lab_ex5_i2s_v1.0.al": "2846b610e6804b547779d8d2c8bea52babcf0514e6452d2b8d938e029b3a7dbf"
+  },
+  "remaining_critical_code": "PHY-7002",
+  "timing_fully_closed": false
+}

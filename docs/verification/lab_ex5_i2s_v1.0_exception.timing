@@ -1,0 +1,615 @@
+Created by          : Tang Dynasty v6.2.168116
+                    : Copyright (c) 2012-2025 Anlogic Inc.
+Generated           : Wed Oct 28 21:07:04 2026
+
+Top Model           : top
+Device              : EG4S20BG256
+Speed               : NA
+STA coverage        : 99.93%
+Constraint File     : D:/codex/fpga/_td_warning_cleanup_20261028/src/user_source/constraints_source/timing.sdc;
+Confidence          : Routed
+Check Corner        : Both (Slow and Fast)
+CRPR Enabled        : Yes
+Report Scheme       : 10 end point(s) per path group, 1 path(s) per end point
+
+
+Check Status
+-------------
+
+Corner   | Max      Min     
+------------------------------------
+Slow     | yes      yes     
+Fast     | yes      yes     
+
+MCP/SMD Summary
+--------------------
+
+		Max Check
+		--------------------
+		     Total    Dominated     Shadowed      Ignored   Constraint
+		        36           36            0            0   set_max_delay -from [get_regs -nowarn {*/fifo_*/primary_addr_gray_reg[*] */fifo_*/*/primary_addr_gray_reg[*]}] -to [get_regs -nowarn {*/fifo_*/sync_r1[*] */fifo_*/*/sync_r1[*]}] 7.7 -nowarn -datapath_only
+		        18           18            0            0   set_max_delay -from [get_regs -nowarn {*/primary_addr_gray_reg[*]}] -to [get_regs -nowarn {*/sync_r1[*]}] -datapath_only 7.700
+
+		Min Check
+		--------------------
+		     Total    Dominated     Shadowed      Ignored   Constraint
+
+Status of timing exceptions
+--------------------------------------------------
+
+MCP/SMD Details
+--------------------
+
+
+Constraint     :   set_max_delay -from [get_regs -nowarn {*/fifo_*/primary_addr_gray_reg[*] */fifo_*/*/primary_addr_gray_reg[*]}] -to [get_regs -nowarn {*/fifo_*/sync_r1[*] */fifo_*/*/sync_r1[*]}] 7.7 -nowarn -datapath_only
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :           36
+Dominated      :           36,        100.0%
+
+
+Constraint     :   set_max_delay -from [get_regs -nowarn {*/primary_addr_gray_reg[*]}] -to [get_regs -nowarn {*/sync_r1[*]}] -datapath_only 7.700
+Check Type     :   Max
+--------------------------------------------------------------------------------
+Total Paths    :           18
+Dominated      :           18,        100.0%
+
+
+Details on timing exceptions
+--------------------------------------------------
+
+Timing details for constraint:
+	set_max_delay -from [get_regs -nowarn {*/fifo_*/primary_addr_gray_reg[*] */fifo_*/*/primary_addr_gray_reg[*]}] -to [get_regs -nowarn {*/fifo_*/sync_r1[*] */fifo_*/*/sync_r1[*]}] 7.7 -nowarn -datapath_only
+--------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+Path Group     :     
+set_max_delay -from [get_regs -nowarn {*/fifo_*/primary_addr_gray_reg[*] */fifo_*/*/primary_addr_gray_reg[*]}] -to [get_regs -nowarn {*/fifo_*/sync_r1[*] */fifo_*/*/sync_r1[*]}] 7.7 -nowarn -datapath_only
+
+Type           :     SMD
+
+Statistics:
+Max            : SWNS      6.520ns, STNS      0.000ns,         0 Viol Endpoints,        36 Total Endpoints,        36 Paths Analyzed
+Min            : HWNS      0.000ns, HTNS      0.000ns,         0 Viol Endpoints,         0 Total Endpoints,         0 Paths Analyzed
+----------------------------------------------------------------------------------------------------
+
+Max Paths
+----------------------------------------------------------------------------------------------------
+Slack               : 6.520ns
+Begin Point         : frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/primary_addr_gray_reg_reg[1]_syn_4.clk (rising edge triggered by clock video_clk  { rise@0.000000ns  fall@20.000000ns  period=40.000000 })
+End Point           : frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/primary_addr_gray_sync_reg[7]_syn_4.mi[0] (rising edge triggered by clock ext_mem_clk  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 7.700ns { ext_mem_clk rising@0.000ns - video_clk rising@0.000ns }
+Data Path Delay     : 1.064ns (cell 0.289ns (27%), net 0.775ns (73%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x040y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: video_pll_m0/pll_inst.refclk
+PLL                 x040y071            0.000          0.000          pin: video_pll_m0/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: video_pll_m0/clk0_buf,  ../user_source/hdl_source/ip/video_pll.v(37)
+                                                                      pin: video_pll_m0/bufg_feedback.clki
+GCLK                x039y070z2          0.000          0.000          pin: video_pll_m0/bufg_feedback.clko
+net (fo=2605)                           0.000          0.000          net: video_clk,  ../user_source/hdl_source/top_tf_hdmi_audio.v(54)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/primary_addr_gray_reg_reg[1]_syn_4.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x029y048z0          0.146    r     0.146          pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/primary_addr_gray_reg_reg[1]_syn_4.q[0]
+net (fo=1)                              0.775          0.921          net: frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/primary_addr_gray_reg[0],  ../user_source/hdl_source/ip/afifo_32_16_256.v(263)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/primary_addr_gray_sync_reg[7]_syn_4.mi[0]
+reg                 x029y048z3          0.143    r     1.064          net: frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/sync_r1[0],  ../user_source/hdl_source/ip/afifo_32_16_256.v(264)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.064               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x000y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: sys_pll_m0/pll_inst.refclk
+PLL                 x000y071            0.000          0.000          pin: sys_pll_m0/pll_inst.clkc[1]
+net (fo=827)                            0.000          0.000          net: frame_read_write_m0/dual_reader$u_reader/mem_clk,  ../user_source/hdl_source/frame_dual_reader.v(15)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/primary_addr_gray_sync_reg[7]_syn_4.clk
+constraint delay                        7.700          7.700               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          7.584               
+clock uncertainty                       0.000          7.584               
+clock pessimism                         0.000          7.584               
+--------------------------------------------------------------------  ---------------
+Required                                               7.584               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.520               
+
+Slack               : 6.546ns
+Begin Point         : frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/primary_addr_gray_reg_reg[4]_syn_4.clk (rising edge triggered by clock ext_mem_clk  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : frame_read_write_m0/dual_reader$u_reader/fifo_a/sub1_syn_61.mi[0] (rising edge triggered by clock video_clk  { rise@0.000000ns  fall@20.000000ns  period=40.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 7.700ns { video_clk rising@0.000ns - ext_mem_clk rising@0.000ns }
+Data Path Delay     : 1.038ns (cell 0.289ns (27%), net 0.749ns (73%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x000y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: sys_pll_m0/pll_inst.refclk
+PLL                 x000y071            0.000          0.000          pin: sys_pll_m0/pll_inst.clkc[1]
+net (fo=827)                            0.000          0.000          net: frame_read_write_m0/dual_reader$u_reader/mem_clk,  ../user_source/hdl_source/frame_dual_reader.v(15)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/primary_addr_gray_reg_reg[4]_syn_4.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x033y046z2          0.146    r     0.146          pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/primary_addr_gray_reg_reg[4]_syn_4.q[0]
+net (fo=1)                              0.749          0.895          net: frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/primary_addr_gray_reg[5],  ../user_source/hdl_source/ip/afifo_32_16_256.v(263)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/sub1_syn_61.mi[0]
+ADDER (reg)         x033y046z0          0.143    r     1.038          net: frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/sync_r1[5],  ../user_source/hdl_source/ip/afifo_32_16_256.v(264)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.038               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x040y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: video_pll_m0/pll_inst.refclk
+PLL                 x040y071            0.000          0.000          pin: video_pll_m0/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: video_pll_m0/clk0_buf,  ../user_source/hdl_source/ip/video_pll.v(37)
+                                                                      pin: video_pll_m0/bufg_feedback.clki
+GCLK                x039y070z2          0.000          0.000          pin: video_pll_m0/bufg_feedback.clko
+net (fo=2605)                           0.000          0.000          net: video_clk,  ../user_source/hdl_source/top_tf_hdmi_audio.v(54)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/sub1_syn_61.clk
+constraint delay                        7.700          7.700               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          7.584               
+clock uncertainty                       0.000          7.584               
+clock pessimism                         0.000          7.584               
+--------------------------------------------------------------------  ---------------
+Required                                               7.584               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.546               
+
+Slack               : 6.552ns
+Begin Point         : frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/secondary_addr_o_reg[7]_syn_4.clk (rising edge triggered by clock ext_mem_clk  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : frame_read_write_m0/dual_reader$u_reader/fifo_b/wr_to_rd_cross_inst/secondary_addr_o_reg[8]_syn_4.mi[0] (rising edge triggered by clock video_clk  { rise@0.000000ns  fall@20.000000ns  period=40.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 7.700ns { video_clk rising@0.000ns - ext_mem_clk rising@0.000ns }
+Data Path Delay     : 1.032ns (cell 0.289ns (28%), net 0.743ns (72%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x000y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: sys_pll_m0/pll_inst.refclk
+PLL                 x000y071            0.000          0.000          pin: sys_pll_m0/pll_inst.clkc[1]
+net (fo=827)                            0.000          0.000          net: frame_read_write_m0/dual_reader$u_reader/mem_clk,  ../user_source/hdl_source/frame_dual_reader.v(15)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/secondary_addr_o_reg[7]_syn_4.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x030y044z2          0.146    r     0.146          pin: frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/secondary_addr_o_reg[7]_syn_4.q[0]
+net (fo=1)                              0.743          0.889          net: frame_read_write_m0/dual_reader$u_reader/fifo_b/wr_to_rd_cross_inst/primary_addr_gray_reg[8],  ../user_source/hdl_source/ip/afifo_32_16_256.v(263)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_b/wr_to_rd_cross_inst/secondary_addr_o_reg[8]_syn_4.mi[0]
+reg                 x033y041z1          0.143    r     1.032          net: frame_read_write_m0/dual_reader$u_reader/fifo_b/wr_to_rd_cross_inst/sync_r1[8],  ../user_source/hdl_source/ip/afifo_32_16_256.v(264)
+--------------------------------------------------------------------  ---------------
+Arrival                                                1.032               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x040y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: video_pll_m0/pll_inst.refclk
+PLL                 x040y071            0.000          0.000          pin: video_pll_m0/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: video_pll_m0/clk0_buf,  ../user_source/hdl_source/ip/video_pll.v(37)
+                                                                      pin: video_pll_m0/bufg_feedback.clki
+GCLK                x039y070z2          0.000          0.000          pin: video_pll_m0/bufg_feedback.clko
+net (fo=2605)                           0.000          0.000          net: video_clk,  ../user_source/hdl_source/top_tf_hdmi_audio.v(54)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_b/wr_to_rd_cross_inst/secondary_addr_o_reg[8]_syn_4.clk
+constraint delay                        7.700          7.700               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          7.584               
+clock uncertainty                       0.000          7.584               
+clock pessimism                         0.000          7.584               
+--------------------------------------------------------------------  ---------------
+Required                                               7.584               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.552               
+
+Slack               : 6.610ns
+Begin Point         : frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/primary_addr_gray_reg_reg[2]_syn_4.clk (rising edge triggered by clock ext_mem_clk  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/sync_r1_reg[3]_syn_4.mi[0] (rising edge triggered by clock video_clk  { rise@0.000000ns  fall@20.000000ns  period=40.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 7.700ns { video_clk rising@0.000ns - ext_mem_clk rising@0.000ns }
+Data Path Delay     : 0.974ns (cell 0.289ns (29%), net 0.685ns (71%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x000y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: sys_pll_m0/pll_inst.refclk
+PLL                 x000y071            0.000          0.000          pin: sys_pll_m0/pll_inst.clkc[1]
+net (fo=827)                            0.000          0.000          net: frame_read_write_m0/dual_reader$u_reader/mem_clk,  ../user_source/hdl_source/frame_dual_reader.v(15)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/primary_addr_gray_reg_reg[2]_syn_4.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x034y046z1          0.146    r     0.146          pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/primary_addr_gray_reg_reg[2]_syn_4.q[1]
+net (fo=1)                              0.685          0.831          net: frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/primary_addr_gray_reg[2],  ../user_source/hdl_source/ip/afifo_32_16_256.v(263)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/sync_r1_reg[3]_syn_4.mi[0]
+reg                 x031y045z3          0.143    r     0.974          net: frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/sync_r1[2],  ../user_source/hdl_source/ip/afifo_32_16_256.v(264)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.974               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x040y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: video_pll_m0/pll_inst.refclk
+PLL                 x040y071            0.000          0.000          pin: video_pll_m0/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: video_pll_m0/clk0_buf,  ../user_source/hdl_source/ip/video_pll.v(37)
+                                                                      pin: video_pll_m0/bufg_feedback.clki
+GCLK                x039y070z2          0.000          0.000          pin: video_pll_m0/bufg_feedback.clko
+net (fo=2605)                           0.000          0.000          net: video_clk,  ../user_source/hdl_source/top_tf_hdmi_audio.v(54)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/sync_r1_reg[3]_syn_4.clk
+constraint delay                        7.700          7.700               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          7.584               
+clock uncertainty                       0.000          7.584               
+clock pessimism                         0.000          7.584               
+--------------------------------------------------------------------  ---------------
+Required                                               7.584               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.610               
+
+Slack               : 6.656ns
+Begin Point         : frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/primary_addr_gray_reg_reg[4]_syn_4.clk (rising edge triggered by clock video_clk  { rise@0.000000ns  fall@20.000000ns  period=40.000000 })
+End Point           : frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/sync_r1_reg[1]_syn_4.mi[0] (rising edge triggered by clock ext_mem_clk  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 7.700ns { ext_mem_clk rising@0.000ns - video_clk rising@0.000ns }
+Data Path Delay     : 0.928ns (cell 0.289ns (31%), net 0.639ns (69%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x040y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: video_pll_m0/pll_inst.refclk
+PLL                 x040y071            0.000          0.000          pin: video_pll_m0/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: video_pll_m0/clk0_buf,  ../user_source/hdl_source/ip/video_pll.v(37)
+                                                                      pin: video_pll_m0/bufg_feedback.clki
+GCLK                x039y070z2          0.000          0.000          pin: video_pll_m0/bufg_feedback.clko
+net (fo=2605)                           0.000          0.000          net: video_clk,  ../user_source/hdl_source/top_tf_hdmi_audio.v(54)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/primary_addr_gray_reg_reg[4]_syn_4.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x030y049z0          0.146    r     0.146          pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/primary_addr_gray_reg_reg[4]_syn_4.q[0]
+net (fo=1)                              0.639          0.785          net: frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/primary_addr_gray_reg[5],  ../user_source/hdl_source/ip/afifo_32_16_256.v(263)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/sync_r1_reg[1]_syn_4.mi[0]
+reg                 x026y048z3          0.143    r     0.928          net: frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/sync_r1[5],  ../user_source/hdl_source/ip/afifo_32_16_256.v(264)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.928               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x000y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: sys_pll_m0/pll_inst.refclk
+PLL                 x000y071            0.000          0.000          pin: sys_pll_m0/pll_inst.clkc[1]
+net (fo=827)                            0.000          0.000          net: frame_read_write_m0/dual_reader$u_reader/mem_clk,  ../user_source/hdl_source/frame_dual_reader.v(15)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/sync_r1_reg[1]_syn_4.clk
+constraint delay                        7.700          7.700               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          7.584               
+clock uncertainty                       0.000          7.584               
+clock pessimism                         0.000          7.584               
+--------------------------------------------------------------------  ---------------
+Required                                               7.584               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.656               
+
+Slack               : 6.672ns
+Begin Point         : frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/primary_addr_gray_reg_reg[6]_syn_4.clk (rising edge triggered by clock video_clk  { rise@0.000000ns  fall@20.000000ns  period=40.000000 })
+End Point           : frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/sync_r1_reg[6]_syn_4.mi[1] (rising edge triggered by clock ext_mem_clk  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 7.700ns { ext_mem_clk rising@0.000ns - video_clk rising@0.000ns }
+Data Path Delay     : 0.912ns (cell 0.289ns (31%), net 0.623ns (69%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x040y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: video_pll_m0/pll_inst.refclk
+PLL                 x040y071            0.000          0.000          pin: video_pll_m0/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: video_pll_m0/clk0_buf,  ../user_source/hdl_source/ip/video_pll.v(37)
+                                                                      pin: video_pll_m0/bufg_feedback.clki
+GCLK                x039y070z2          0.000          0.000          pin: video_pll_m0/bufg_feedback.clko
+net (fo=2605)                           0.000          0.000          net: video_clk,  ../user_source/hdl_source/top_tf_hdmi_audio.v(54)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/primary_addr_gray_reg_reg[6]_syn_4.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x029y042z0          0.146    r     0.146          pin: frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/primary_addr_gray_reg_reg[6]_syn_4.q[1]
+net (fo=1)                              0.623          0.769          net: frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/primary_addr_gray_reg[6],  ../user_source/hdl_source/ip/afifo_32_16_256.v(263)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/sync_r1_reg[6]_syn_4.mi[1]
+reg                 x030y044z3          0.143    r     0.912          net: frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/sync_r1[6],  ../user_source/hdl_source/ip/afifo_32_16_256.v(264)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.912               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x000y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: sys_pll_m0/pll_inst.refclk
+PLL                 x000y071            0.000          0.000          pin: sys_pll_m0/pll_inst.clkc[1]
+net (fo=827)                            0.000          0.000          net: frame_read_write_m0/dual_reader$u_reader/mem_clk,  ../user_source/hdl_source/frame_dual_reader.v(15)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/sync_r1_reg[6]_syn_4.clk
+constraint delay                        7.700          7.700               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          7.584               
+clock uncertainty                       0.000          7.584               
+clock pessimism                         0.000          7.584               
+--------------------------------------------------------------------  ---------------
+Required                                               7.584               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.672               
+
+Slack               : 6.672ns
+Begin Point         : frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/primary_addr_gray_reg_reg[4]_syn_4.clk (rising edge triggered by clock video_clk  { rise@0.000000ns  fall@20.000000ns  period=40.000000 })
+End Point           : frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/sync_r1_reg[8]_syn_4.mi[0] (rising edge triggered by clock ext_mem_clk  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 7.700ns { ext_mem_clk rising@0.000ns - video_clk rising@0.000ns }
+Data Path Delay     : 0.912ns (cell 0.289ns (31%), net 0.623ns (69%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x040y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: video_pll_m0/pll_inst.refclk
+PLL                 x040y071            0.000          0.000          pin: video_pll_m0/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: video_pll_m0/clk0_buf,  ../user_source/hdl_source/ip/video_pll.v(37)
+                                                                      pin: video_pll_m0/bufg_feedback.clki
+GCLK                x039y070z2          0.000          0.000          pin: video_pll_m0/bufg_feedback.clko
+net (fo=2605)                           0.000          0.000          net: video_clk,  ../user_source/hdl_source/top_tf_hdmi_audio.v(54)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/primary_addr_gray_reg_reg[4]_syn_4.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x030y044z1          0.146    r     0.146          pin: frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/primary_addr_gray_reg_reg[4]_syn_4.q[1]
+net (fo=1)                              0.623          0.769          net: frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/primary_addr_gray_reg[4],  ../user_source/hdl_source/ip/afifo_32_16_256.v(263)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/sync_r1_reg[8]_syn_4.mi[0]
+reg                 x029y045z2          0.143    r     0.912          net: frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/sync_r1[4],  ../user_source/hdl_source/ip/afifo_32_16_256.v(264)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.912               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x000y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: sys_pll_m0/pll_inst.refclk
+PLL                 x000y071            0.000          0.000          pin: sys_pll_m0/pll_inst.clkc[1]
+net (fo=827)                            0.000          0.000          net: frame_read_write_m0/dual_reader$u_reader/mem_clk,  ../user_source/hdl_source/frame_dual_reader.v(15)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_b/rd_to_wr_cross_inst/sync_r1_reg[8]_syn_4.clk
+constraint delay                        7.700          7.700               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          7.584               
+clock uncertainty                       0.000          7.584               
+clock pessimism                         0.000          7.584               
+--------------------------------------------------------------------  ---------------
+Required                                               7.584               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.672               
+
+Slack               : 6.675ns
+Begin Point         : frame_read_write_m0/dual_reader$u_reader/fifo_b/wr_to_rd_cross_inst/primary_addr_gray_reg_reg[1]_syn_4.clk (rising edge triggered by clock ext_mem_clk  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : frame_read_write_m0/dual_reader$u_reader/fifo_b/sub0_syn_61.mi[0] (rising edge triggered by clock video_clk  { rise@0.000000ns  fall@20.000000ns  period=40.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 7.700ns { video_clk rising@0.000ns - ext_mem_clk rising@0.000ns }
+Data Path Delay     : 0.909ns (cell 0.289ns (31%), net 0.620ns (69%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x000y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: sys_pll_m0/pll_inst.refclk
+PLL                 x000y071            0.000          0.000          pin: sys_pll_m0/pll_inst.clkc[1]
+net (fo=827)                            0.000          0.000          net: frame_read_write_m0/dual_reader$u_reader/mem_clk,  ../user_source/hdl_source/frame_dual_reader.v(15)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_b/wr_to_rd_cross_inst/primary_addr_gray_reg_reg[1]_syn_4.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x031y042z3          0.146    r     0.146          pin: frame_read_write_m0/dual_reader$u_reader/fifo_b/wr_to_rd_cross_inst/primary_addr_gray_reg_reg[1]_syn_4.q[0]
+net (fo=1)                              0.620          0.766          net: frame_read_write_m0/dual_reader$u_reader/fifo_b/wr_to_rd_cross_inst/primary_addr_gray_reg[0],  ../user_source/hdl_source/ip/afifo_32_16_256.v(263)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_b/sub0_syn_61.mi[0]
+ADDER (reg)         x030y042z0          0.143    r     0.909          net: frame_read_write_m0/dual_reader$u_reader/fifo_b/wr_to_rd_cross_inst/sync_r1[0],  ../user_source/hdl_source/ip/afifo_32_16_256.v(264)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.909               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x040y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: video_pll_m0/pll_inst.refclk
+PLL                 x040y071            0.000          0.000          pin: video_pll_m0/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: video_pll_m0/clk0_buf,  ../user_source/hdl_source/ip/video_pll.v(37)
+                                                                      pin: video_pll_m0/bufg_feedback.clki
+GCLK                x039y070z2          0.000          0.000          pin: video_pll_m0/bufg_feedback.clko
+net (fo=2605)                           0.000          0.000          net: video_clk,  ../user_source/hdl_source/top_tf_hdmi_audio.v(54)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_b/sub0_syn_61.clk
+constraint delay                        7.700          7.700               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          7.584               
+clock uncertainty                       0.000          7.584               
+clock pessimism                         0.000          7.584               
+--------------------------------------------------------------------  ---------------
+Required                                               7.584               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.675               
+
+Slack               : 6.693ns
+Begin Point         : frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/primary_addr_gray_reg_reg[6]_syn_4.clk (rising edge triggered by clock ext_mem_clk  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_display_controls/menu/add2_syn_47.mi[0] (rising edge triggered by clock video_clk  { rise@0.000000ns  fall@20.000000ns  period=40.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 7.700ns { video_clk rising@0.000ns - ext_mem_clk rising@0.000ns }
+Data Path Delay     : 0.891ns (cell 0.289ns (32%), net 0.602ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x000y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: sys_pll_m0/pll_inst.refclk
+PLL                 x000y071            0.000          0.000          pin: sys_pll_m0/pll_inst.clkc[1]
+net (fo=827)                            0.000          0.000          net: frame_read_write_m0/dual_reader$u_reader/mem_clk,  ../user_source/hdl_source/frame_dual_reader.v(15)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/primary_addr_gray_reg_reg[6]_syn_4.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x031y046z3          0.146    r     0.146          pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/primary_addr_gray_reg_reg[6]_syn_4.q[0]
+net (fo=1)                              0.602          0.748          net: frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/primary_addr_gray_reg[7],  ../user_source/hdl_source/ip/afifo_32_16_256.v(263)
+                                                                      pin: u_display_controls/menu/add2_syn_47.mi[0]
+ADDER (reg)         x031y047z0          0.143    r     0.891          net: frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/sync_r1[7],  ../user_source/hdl_source/ip/afifo_32_16_256.v(264)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.891               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x040y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: video_pll_m0/pll_inst.refclk
+PLL                 x040y071            0.000          0.000          pin: video_pll_m0/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: video_pll_m0/clk0_buf,  ../user_source/hdl_source/ip/video_pll.v(37)
+                                                                      pin: video_pll_m0/bufg_feedback.clki
+GCLK                x039y070z2          0.000          0.000          pin: video_pll_m0/bufg_feedback.clko
+net (fo=2605)                           0.000          0.000          net: video_clk,  ../user_source/hdl_source/top_tf_hdmi_audio.v(54)
+                                                                      pin: u_display_controls/menu/add2_syn_47.clk
+constraint delay                        7.700          7.700               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          7.584               
+clock uncertainty                       0.000          7.584               
+clock pessimism                         0.000          7.584               
+--------------------------------------------------------------------  ---------------
+Required                                               7.584               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.693               
+
+Slack               : 6.693ns
+Begin Point         : frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/secondary_addr_o_reg[2]_syn_4.clk (rising edge triggered by clock ext_mem_clk  { rise@0.000000ns  fall@4.000000ns  period=8.000000 })
+End Point           : u_display_controls/menu/add2_syn_47.mi[1] (rising edge triggered by clock video_clk  { rise@0.000000ns  fall@20.000000ns  period=40.000000 })
+Check Type          : setup
+Process             : slow
+Budget              : 7.700ns { video_clk rising@0.000ns - ext_mem_clk rising@0.000ns }
+Data Path Delay     : 0.891ns (cell 0.289ns (32%), net 0.602ns (68%))
+Clock Skew          : 0.000ns
+Logic Level         : 0
+Max Fanout          : 1
+Clock Uncertainty   : 0.000ns (sdc uncertainty: 0.000ns, default uncertainty: 0.100ns)
+
+Delay Type          Location             Incr           Path   Level  Netlist Info
+--------------------------------------------------------------------  ---------------
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x000y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: sys_pll_m0/pll_inst.refclk
+PLL                 x000y071            0.000          0.000          pin: sys_pll_m0/pll_inst.clkc[1]
+net (fo=827)                            0.000          0.000          net: frame_read_write_m0/dual_reader$u_reader/mem_clk,  ../user_source/hdl_source/frame_dual_reader.v(15)
+                                                                      pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/secondary_addr_o_reg[2]_syn_4.clk
+--------------------------------------------------------------------  ---------------
+clk2q               x030y047z0          0.146    r     0.146          pin: frame_read_write_m0/dual_reader$u_reader/fifo_a/rd_to_wr_cross_inst/secondary_addr_o_reg[2]_syn_4.q[0]
+net (fo=1)                              0.602          0.748          net: frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/primary_addr_gray_reg[8],  ../user_source/hdl_source/ip/afifo_32_16_256.v(263)
+                                                                      pin: u_display_controls/menu/add2_syn_47.mi[1]
+ADDER (reg)         x031y047z0          0.143    r     0.891          net: frame_read_write_m0/dual_reader$u_reader/fifo_a/wr_to_rd_cross_inst/sync_r1[8],  ../user_source/hdl_source/ip/afifo_32_16_256.v(264)
+--------------------------------------------------------------------  ---------------
+Arrival                                                0.891               
+
+source latency                          0.000          0.000               
+port                R7                  0.000          0.000          pin: clk
+hierarchy                               0.000          0.000          pin: clk_syn_3.ipad
+PAD                 x020y071            0.000          0.000          pin: clk_syn_3.di
+net (fo=1696)       x040y071            0.000          0.000          net: frame_read_write_m0/write_buf/clkw,  ../user_source/hdl_source/ip/afifo_16_32_256.v(25)
+                                                                      pin: video_pll_m0/pll_inst.refclk
+PLL                 x040y071            0.000          0.000          pin: video_pll_m0/pll_inst.clkc[0]
+net (fo=1)                              0.000          0.000          net: video_pll_m0/clk0_buf,  ../user_source/hdl_source/ip/video_pll.v(37)
+                                                                      pin: video_pll_m0/bufg_feedback.clki
+GCLK                x039y070z2          0.000          0.000          pin: video_pll_m0/bufg_feedback.clko
+net (fo=2605)                           0.000          0.000          net: video_clk,  ../user_source/hdl_source/top_tf_hdmi_audio.v(54)
+                                                                      pin: u_display_controls/menu/add2_syn_47.clk
+constraint delay                        7.700          7.700               
+--------------------------------------------------------------------  ---------------
+setup                                  -0.116          7.584               
+clock uncertainty                       0.000          7.584               
+clock pessimism                         0.000          7.584               
+--------------------------------------------------------------------  ---------------
+Required                                               7.584               
+--------------------------------------------------------------------  ---------------
+Slack                                                  6.693               
+
+
+
+Min Paths
+----------------------------------------------------------------------------------------------------
+
+
+
+
