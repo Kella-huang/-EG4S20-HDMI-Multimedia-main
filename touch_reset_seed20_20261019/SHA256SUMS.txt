@@ -1,0 +1,2 @@
+29f2b91472ed7c9acd776215fcdd46bb9a1e372126fe3dce935109d7f9c4ec5d *hdmi_multimedia_touch_reset.bit
+62d174c34443dc6a495a92a3afc13c674ae53459f5b58d60e97bbaa9983775c0 *hdmi_multimedia_touch_reset.bas
